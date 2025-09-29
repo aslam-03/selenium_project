@@ -5,15 +5,16 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Optional
 
+import os
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.wait import WebDriverWait
-
+from dotenv import load_dotenv
 
 BASE_URL = "https://www.headphonezone.in/"
-EMAIL = "aslamachu8558@gmail.com"
-PASSWORD = "Ar-rahman"
+EMAIL = os.getenv("EMAIL")
+PASSWORD = os.getenv("PASSWORD")    
 DEFAULT_TIMEOUT = 15
 SCROLL_PAUSE_SECONDS = 1.25
 
